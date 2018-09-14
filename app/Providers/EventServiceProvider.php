@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
+use App\Listeners\Genesis\CreateExtraFields;
+use App\Listeners\Genesis\CreateWorkflows;
+use Betalabs\LaravelHelper\Events\GenesisCompleted;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -17,6 +19,11 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        GenesisCompleted::class => [
+            CreateWorkflows::class,
+            CreateExtraFields::class,
+            // You can add as much as you need...
         ],
     ];
 
