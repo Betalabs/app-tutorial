@@ -6,19 +6,20 @@
     "type": "project",
     "require": {
         "php": "^7.4",
-        "betalabs/engine-laravel-helper": "^0.4.1",
-        "betalabs/engine-phpsdk": "^0.5.1",
+        "betalabs/engine-api-handler": "^1.0",
+        "betalabs/engine-laravel-helper": "^2.0",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/framework": "^8.75",
+        "laravel/passport": "^10.3",
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "classmap": [
