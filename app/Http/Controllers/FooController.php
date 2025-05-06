@@ -14,7 +14,7 @@ class FooController extends Controller
         // since we are using auth:api so an user is surely logged.
         Engine::auth(\Auth::user());
 
-        $response = $engineRequest->get('engine-endpoint')->getContents();
+        $engineRequest->get('engine-endpoint')->getContents();
         //...
 
         return response()->setStatusCode(204);
